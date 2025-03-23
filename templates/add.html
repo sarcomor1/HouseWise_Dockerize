@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Record</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <form class="box" action="{{ url_for('add') }}" method="POST">
+        <h1>Add New Record</h1>
+
+        <input type="text" name="price" placeholder="Price">
+        <input type="text" name="size" placeholder="Size">
+
+        <input type="submit" name="submit" value="Add">
+    </form>
+</body>
+</html>

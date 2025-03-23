@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="UTF-8">
+        <title>HouseWise - Home</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename= 'style.css') }}">
+    </head>
+    <body>
+        <form class="box" action="{{ url_for('query') }}" method="POST">
+            <h1>HouseWise</h1>
+            <input type="text" name="add/delete/list" placeholder="add/delete/list">
+            <input type="submit" name="submit" value="submit">
+        </form>
+    </body>
+</html>

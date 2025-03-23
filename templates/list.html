@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Record List</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename= 'style last.css') }}">
+    </head>
+    <body>
+        <form class="box" action="{{ url_for('sort_list') }}" method="POST">
+            
+            <h1>Record List</h1>
+
+            <ul>
+                {% for i in DB_records %}
+                    <li><strong>ID:</strong> {{ i[0] }}</li>
+                    <li><strong>Price:</strong> {{ i[1] }} $</li>
+                    <li><strong>Size:</strong> {{ i[2] }} m²</li>
+                    <hr>
+                {% endfor %}
+            </ul>
+
+            <input type="text" name="List/Price/Size" placeholder="List/Price/Size">
+            <input type="submit" name="submit" value="submit">
+        </form>
+    </body>
+</html>
